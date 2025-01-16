@@ -1,6 +1,6 @@
 package cursoJava;
 
-public class PrimeiraClasseJava {
+public class OperacoesLogicasAninhadas {
 
 	/* Main é um método auto executável em Java */
 	public static void main(String[] args) {
@@ -29,25 +29,6 @@ public class PrimeiraClasseJava {
 		} else {
 			System.out.println("Aluno reprovado direto");
 		}
-
-		/* Condições logica com IF e ELSE */
-		/*
-		 * if (media >= 70) { System.out.println("Aluno aprovado " + media); } else if
-		 * (media >= 40 && media <= 69) { System.out.println("Aluno em recuperação " +
-		 * media); } else { System.out.println("Aluno reprovado " + media); }
-		 */
-
-		/* operadores ternários são para micro validações */
-
-		/*
-		 * String saidaResultado;
-		 * 
-		 * saidaResultado = media >= 70 ? "Aluno Aprovado" : (media >= 40 && media <=
-		 * 69) ? "Aluno em recuperação" : "Reprovado";
-		 * 
-		 * System.out.println(saidaResultado);
-		 */
-
 	}
 
 }
