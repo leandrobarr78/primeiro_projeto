@@ -2,7 +2,7 @@ package cursoJava;
 
 import javax.swing.JOptionPane;
 
-public class EntradaDeDados {
+public class opcaoDeConfirmacao {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -16,8 +16,19 @@ public class EntradaDeDados {
 
 		double resto = carroNumero % pessoaNumero;
 
-		JOptionPane.showMessageDialog(null,
-				"Divisão para pessoas deu " + divisao + " carros e sobrou " + resto + " carros");
+		int resposta = JOptionPane.showConfirmDialog(null, "Deseja ver o resultado da divisão?");
+
+		if (resposta == 0) {
+			JOptionPane.showMessageDialog(null, "Divisão para pessoas deu " + divisao);
+
+		}
+
+		resposta = JOptionPane.showConfirmDialog(null, "Deseja ver o resultado do resto?");
+
+		if (resposta == 0) {
+			JOptionPane.showMessageDialog(null, "O resto da divisão é: " + resto);
+
+		}
 
 	}
 }
