@@ -1,28 +1,46 @@
 package cursoJava;
 
+import javax.swing.JOptionPane;
+
 import cursoJava.classes.Aluno;
 
 public class primeiraClasseJava1 {
 	public static void main(String[] args) {
 
 		/* New Aluno() é uma instância (criação de objeto) */
-		Aluno aluno1 = new Aluno();/* Aqui será o João */
-
 		/* aluno1 é uma referência para o objeto aluno */
-		aluno1.setNome("João Miranda");
-		aluno1.setIdade(47);
-		aluno1.setDataNascimento("10/05/1978");
-		aluno1.setRegistroGeral("10843995-1");
-		aluno1.setNumeroCpf("067.345.687-72");
-		aluno1.setNomeMae("Rosa Miranda");
-		aluno1.setNomePai("Valdo Miranda");
-		aluno1.setDataMatricula("15/01/2024");
-		aluno1.setNomeEscola("JDEV treinamento");
-		aluno1.setSerieMatriculado("5º período");
-		aluno1.setNota1(90);
-		aluno1.setNota2(65);
-		aluno1.setNota3(58);
-		aluno1.setNota4(92);
+
+		String nome = JOptionPane.showInputDialog("Qual o nome do aluno?");
+		String idade = JOptionPane.showInputDialog("idade do aluno?");
+		String dataNascimento = JOptionPane.showInputDialog("Data de nascimento");
+		String registroGeral = JOptionPane.showInputDialog("Nº RG");
+		String numeroCpf = JOptionPane.showInputDialog("Nº CPF");
+		String nomeMae = JOptionPane.showInputDialog("Nome da Mãe");
+		String nomePai = JOptionPane.showInputDialog("Nome do Pai");
+		String dataMatricula = JOptionPane.showInputDialog("data da matricula");
+		String nomeEscola = JOptionPane.showInputDialog("Nome da escola");
+		String serieMatriculado = JOptionPane.showInputDialog("Série da matrícula");
+		String nota1 = JOptionPane.showInputDialog("Primeira nota");
+		String nota2 = JOptionPane.showInputDialog("Segunda nota");
+		String nota3 = JOptionPane.showInputDialog("Terceira nota");
+		String nota4 = JOptionPane.showInputDialog("Quarta nota");
+
+		Aluno aluno1 = new Aluno();
+
+		aluno1.setNome(nome);
+		aluno1.setIdade(Integer.valueOf(idade));
+		aluno1.setDataNascimento(dataNascimento);
+		aluno1.setRegistroGeral(registroGeral);
+		aluno1.setNumeroCpf(numeroCpf);
+		aluno1.setNomeMae(nomeMae);
+		aluno1.setNomePai(nomePai);
+		aluno1.setDataMatricula(dataMatricula);
+		aluno1.setNomeEscola(nomeEscola);
+		aluno1.setSerieMatriculado(serieMatriculado);
+		aluno1.setNota1(Double.parseDouble(nota1));
+		aluno1.setNota2(Double.parseDouble(nota2));
+		aluno1.setNota3(Double.parseDouble(nota3));
+		aluno1.setNota4(Double.parseDouble(nota4));
 
 		System.out.println("O nome é " + aluno1.getNome());
 		System.out.println("A idade é " + aluno1.getIdade());
@@ -35,6 +53,7 @@ public class primeiraClasseJava1 {
 		System.out.println("O nome da escola é " + aluno1.getNomeEscola());
 		System.out.println("A série do matriculado é o " + aluno1.getSerieMatriculado());
 		System.out.println("A média do aluno é " + aluno1.getMediaNota());
+		System.out.println("Resultado é: " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
 
 		/*
 		 * =============================================================================
@@ -45,9 +64,9 @@ public class primeiraClasseJava1 {
 
 		Aluno aluno3 = new Aluno();/* Aqui será o Leandro */
 
-		Aluno aluno4 = new Aluno("Maria");
+		Aluno aluno4 = new Aluno();
 
-		Aluno aluno5 = new Aluno("José", 21);
+		Aluno aluno5 = new Aluno();
 
 	}
 
