@@ -127,7 +127,7 @@ public class Aluno {
 		this.serieMatriculado = serieMatriculado;
 	}
 
-	/* Método que retorna a média do aluno */
+	/* Método que retorna a média do aluno aprovado */
 	public double getMediaNota() {
 
 		double somaNotas = 0.0;
@@ -139,9 +139,10 @@ public class Aluno {
 		return somaNotas / disciplinas.size();
 	}
 
+	/* Método que retorna true para aprovado e false para reprovado */
 	public boolean getAlunoAprovado() {
 		double media = this.getMediaNota();
-		if (media >= 70) {
+		if (media >= 7.0) {
 			return true;
 		} else {
 			return false;
@@ -150,8 +151,12 @@ public class Aluno {
 
 	public String getAlunoAprovado2() {
 		double media = this.getMediaNota();
-		if (media >= 70) {
-			return "Aluno está aprovado";
+		if (media >= 5.0) {
+			if (media >= 7.0) {
+				return "Aluno está aprovado";
+
+			} else
+				return "Aluno está em recuperação";
 		} else {
 			return "Aluno está reprovado";
 		}
