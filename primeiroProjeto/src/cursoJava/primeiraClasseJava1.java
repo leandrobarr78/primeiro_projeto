@@ -13,7 +13,7 @@ public class primeiraClasseJava1 {
 
 		List<Aluno> alunos = new ArrayList<Aluno>();
 
-		for (int qtd = 1; qtd <= 2; qtd++) {
+		for (int qtd = 1; qtd <= 1; qtd++) {
 
 			/* New Aluno() é uma instância (criação de objeto) */
 			/* aluno1 é uma referência para o objeto aluno */
@@ -72,8 +72,25 @@ public class primeiraClasseJava1 {
 			}
 			alunos.add(aluno1);
 		}
+		
+		for(int pos = 0; pos < alunos.size(); pos ++) {
+			
+			Aluno aluno = alunos.get(pos);
+			
+			System.out.println("Aluno = " + aluno.getNome());
+			System.out.println("média do aluno = " + aluno.getMediaNota());
+			System.out.println("Resultado = " + aluno.getAlunoAprovado2());
+			System.out.println("---------------------------------------------------------------");
+			
+			for (int posd = 0; posd < aluno.getDisciplinas().size(); posd ++) {
+				
+				Disciplina disc = aluno.getDisciplinas().get(posd);
+				System.out.println(" Materia = " + disc.getDisciplina() + " / Nota = " + disc.getNota());
+				
+			}
+		}
 
-		for (Aluno aluno : alunos) {
+		/*for (Aluno aluno : alunos) {
 			if (aluno.getNome().equalsIgnoreCase("Leandro")) {
 				alunos.remove(aluno);
 				break;
@@ -93,7 +110,7 @@ public class primeiraClasseJava1 {
 				System.out.println(disciplina.getDisciplina());
 
 			}
-		}
+		}*/
 
 	}
 }
