@@ -13,6 +13,12 @@ import cursoJava.constantes.StatusAluno;
 
 public class primeiraClasseJava1 {
 	public static void main(String[] args) {
+		
+		String login = JOptionPane.showInputDialog("Informe o login");
+		String senha = JOptionPane.showInputDialog("Informe a senha");
+		
+		if(login.equalsIgnoreCase("admin") &&
+				senha.equalsIgnoreCase("admin")) {
 
 		List<Aluno> alunos = new ArrayList<Aluno>();
 
@@ -120,6 +126,8 @@ public class primeiraClasseJava1 {
 					+ " com média de + " + aluno.getMediaNota());
 		}
 
+	}
+		
 	}
 
 }
