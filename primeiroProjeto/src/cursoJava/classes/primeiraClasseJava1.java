@@ -1,4 +1,4 @@
-package cursoJava;
+package cursoJava.classes;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,8 +7,6 @@ import java.util.List;
 
 import javax.swing.JOptionPane;
 
-import cursoJava.classes.Aluno;
-import cursoJava.classes.Disciplina;
 import cursoJava.constantes.StatusAluno;
 
 public class primeiraClasseJava1 {
