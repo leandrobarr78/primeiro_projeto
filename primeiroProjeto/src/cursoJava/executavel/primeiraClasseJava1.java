@@ -1,4 +1,4 @@
-package cursoJava.classes;
+package cursoJava.executavel;
 
 import java.util.ArrayList;
 import java.util.HashMap;

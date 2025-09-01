@@ -8,20 +8,12 @@ import java.util.Objects;
 import cursoJava.constantes.StatusAluno;
 
 /*esta é a nossa classe/objeto que representa o aluno*/
-public class Aluno {
+public class Aluno extends Pessoa {
 
 	/* Esses são os atributos do Aluno */
-	private String nome;
-	private int idade;
-	private String dataNascimento;
-	private String registroGeral;
-	private String numeroCpf;
-	private String nomeMae;
-	private String nomePai;
 	private String dataMatricula;
 	private String nomeEscola;
 	private String serieMatriculado;
-
 	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
 
 	public List<Disciplina> getDisciplinas() {
@@ -186,7 +178,22 @@ public class Aluno {
 		if (getClass() != obj.getClass())
 			return false;
 		Aluno other = (Aluno) obj;
-		return Objects.equals(nome, other.nome);
+		if (nome == null) {
+			if (other.nome != null)
+				return false;
+		} else if (!nome.equals(other.nome))
+			return false;
+		if (numeroCpf == null) {
+			if (other.numeroCpf != null)
+				return false;
+		} else if (!numeroCpf.equals(other.numeroCpf))
+			return false;
+		return true;
 	}
 
+	@Override /* identifica método sobreescrito */
+	public boolean pessoaMaiorIdade() {
+
+		return super.pessoaMaiorIdade();
+	}
 }
