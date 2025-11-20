@@ -196,4 +196,10 @@ public class Aluno extends Pessoa {
 
 		return super.pessoaMaiorIdade();
 	}
+
+	@Override
+	public double salario() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }

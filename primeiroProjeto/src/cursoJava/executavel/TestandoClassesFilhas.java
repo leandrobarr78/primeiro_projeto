@@ -2,6 +2,7 @@ package cursoJava.executavel;
 
 import cursoJava.classes.Aluno;
 import cursoJava.classes.Diretor;
+import cursoJava.classes.Pessoa;
 import cursoJava.classes.Secretario;
 
 public class TestandoClassesFilhas {
@@ -27,6 +28,8 @@ public class TestandoClassesFilhas {
 		System.out.println(aluno.pessoaMaiorIdade());
 		System.out.println(diretor.pessoaMaiorIdade());
 		System.out.println(secretario.pessoaMaiorIdade());
+
+		Aluno aluno2 = new Aluno();
 
 	}
 
